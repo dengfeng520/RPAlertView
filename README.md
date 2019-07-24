@@ -1,10 +1,7 @@
 <h1>RPAlertView</h1>
 
---
  
 * iOS 9+
-
-* pod V1.7.0+
 
 * license MIT
 
