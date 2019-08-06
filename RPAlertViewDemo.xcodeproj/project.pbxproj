@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DC1739E22F96646009A1285 /* RPDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1739B22F96646009A1285 /* RPDateView.m */; };
 		1DDC415D22E80A50000EB88E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC415C22E80A50000EB88E /* AppDelegate.m */; };
 		1DDC416022E80A50000EB88E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC415F22E80A50000EB88E /* ViewController.m */; };
 		1DDC416322E80A50000EB88E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC416122E80A50000EB88E /* Main.storyboard */; };
@@ -23,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DC1739922F96646009A1285 /* RPDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDateView.h; sourceTree = "<group>"; };
+		1DC1739A22F96646009A1285 /* RPDateView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RPDateView+Extension.h"; sourceTree = "<group>"; };
+		1DC1739B22F96646009A1285 /* RPDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDateView.m; sourceTree = "<group>"; };
+		1DC1739C22F96646009A1285 /* RPDateMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDateMode.h; sourceTree = "<group>"; };
+		1DC1739D22F96646009A1285 /* RPDateViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDateViewProtocol.h; sourceTree = "<group>"; };
 		1DDC415822E80A50000EB88E /* RPAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDC415B22E80A50000EB88E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1DDC415C22E80A50000EB88E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DC1739822F96646009A1285 /* RPDateView */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1739922F96646009A1285 /* RPDateView.h */,
+				1DC1739A22F96646009A1285 /* RPDateView+Extension.h */,
+				1DC1739B22F96646009A1285 /* RPDateView.m */,
+				1DC1739C22F96646009A1285 /* RPDateMode.h */,
+				1DC1739D22F96646009A1285 /* RPDateViewProtocol.h */,
+			);
+			path = RPDateView;
+			sourceTree = "<group>";
+		};
 		1DDC414F22E80A50000EB88E = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +97,7 @@
 		1DDC415A22E80A50000EB88E /* RPAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1DC1739822F96646009A1285 /* RPDateView */,
 				1DDC417122E80A6E000EB88E /* BXAlertView */,
 				1DDC415B22E80A50000EB88E /* AppDelegate.h */,
 				1DDC415C22E80A50000EB88E /* AppDelegate.m */,
@@ -192,6 +211,7 @@
 				1DDC417E22E80A6E000EB88E /* AlertViewShowPresentAnimation.m in Sources */,
 				1DDC418622E8330F000EB88E /* RPAlertViewController+Animation.m in Sources */,
 				1DDC417D22E80A6E000EB88E /* AlertCenterView.m in Sources */,
+				1DC1739E22F96646009A1285 /* RPDateView.m in Sources */,
 				1DDC417F22E80A6E000EB88E /* AlertViewDissmissAnimation.m in Sources */,
 				1DDC417C22E80A6E000EB88E /* AlertShowPresentationController.m in Sources */,
 			);
