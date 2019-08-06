@@ -8,7 +8,8 @@
 ![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo1.png?raw=true)
 ![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo2.png?raw=true)
 ![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo3.png?raw=true)
-
+![DateDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/datedemo1.png?raw=true)
+![DateDemo2](https://github.com/dengfeng520/RPAlertView/blob/master/datedemo1.png?raw=true)
 
 <h3>Usage</h3>
 
