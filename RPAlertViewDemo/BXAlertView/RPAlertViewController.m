@@ -7,11 +7,9 @@
 //
 
 #import "RPAlertViewController.h"
-#import "AlertCenterView.h"
 
 @interface RPAlertViewController ()
 
-@property (strong, nonatomic) AlertCenterView *centerView;
 @property (strong, nonatomic) UIButton *leftBtn;
 @property (strong, nonatomic) UIButton *rightBtn;
 
@@ -36,6 +34,7 @@
         weakSelf.rightBtnBlock();
         [weakSelf dismissViewControllerAnimated:true completion:nil];
     };
+    self.centerView.transform = CGAffineTransformMakeScale(0.1, 0.1);
 }
 
 - (AlertCenterView *)centerView {

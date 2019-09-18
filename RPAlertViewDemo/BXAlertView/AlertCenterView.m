@@ -87,7 +87,7 @@
     [[self.onlyOneBtn.heightAnchor constraintEqualToConstant:48] setActive:true];
     [[self.onlyOneBtn.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     [self.onlyOneBtn setTitle:@"OK" forState:UIControlStateNormal];
-    [self.onlyOneBtn setTitleColor:[UIColor colorWithRed:116/255.0 green:66/255.0 blue:255/255.0 alpha:1] forState:UIControlStateNormal];
+    [self.onlyOneBtn setTitleColor:[UIColor colorWithRed:53/255.0 green:120/255.0 blue:246/255.0 alpha:1] forState:UIControlStateNormal];
     [self.onlyOneBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickOneBtnBlock();
     }];
@@ -116,7 +116,7 @@
     [[self.rightBtn.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     [[self.rightBtn.heightAnchor constraintEqualToConstant:48] setActive:true];
     [self.rightBtn setTitle:@"OK" forState:UIControlStateNormal];
-    [self.rightBtn setTitleColor:[UIColor colorWithRed:116/255.0 green:66/255.0 blue:255/255.0 alpha:1] forState:UIControlStateNormal];
+    [self.rightBtn setTitleColor:[UIColor colorWithRed:53/255.0 green:120/255.0 blue:246/255.0 alpha:1] forState:UIControlStateNormal];
     [self.rightBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickRightBtnBlock();
     }];

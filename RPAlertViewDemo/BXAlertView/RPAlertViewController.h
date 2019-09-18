@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlertCenterView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSInteger, alertMode) {
 
 - (instancetype)initWithMode:(bgColorMode)mode;
 
+@property (strong, nonatomic) AlertCenterView *centerView;
 @property (strong, nonatomic) void(^leftBtnBlock)(void);
 @property (strong, nonatomic) void(^rightBtnBlock)(void);
 @property (strong, nonatomic) void (^oneBtnBlock)(void);

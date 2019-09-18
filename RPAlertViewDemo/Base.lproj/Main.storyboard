@@ -35,7 +35,9 @@
                                     <constraint firstAttribute="height" constant="30" id="3Tg-G3-RtG"/>
                                     <constraint firstAttribute="width" constant="181" id="wkr-FT-HEw"/>
                                 </constraints>
-                                <state key="normal" title="Only OK "/>
+                                <state key="normal" title="Only OK ">
+                                    <color key="titleColor" red="0.20596292614936829" green="0.46943831443786621" blue="0.96475642919540405" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="clickShowOnlyOKBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJC-yr-XOC"/>
                                 </connections>
@@ -51,39 +53,13 @@
                                     <action selector="clickAttributesStringBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBT-zv-v84"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYf-1q-Nfq">
-                                <rect key="frame" x="116.5" y="585" width="181" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="Xem-RU-fQw"/>
-                                    <constraint firstAttribute="height" constant="30" id="ygu-Hj-Qlh"/>
-                                </constraints>
-                                <state key="normal" title="dateView1"/>
-                                <connections>
-                                    <action selector="showDateViewTypeFrist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzz-Ul-gWb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYV-wz-ojO">
-                                <rect key="frame" x="116.5" y="659" width="181" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="1iF-1o-zTv"/>
-                                    <constraint firstAttribute="height" constant="30" id="SGg-LS-FiW"/>
-                                </constraints>
-                                <state key="normal" title="dateView2"/>
-                                <connections>
-                                    <action selector="showDateViewTypeSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlT-ZT-ThL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zYV-wz-ojO" firstAttribute="top" secondItem="oYf-1q-Nfq" secondAttribute="bottom" constant="44" id="0Sm-Lf-NJh"/>
                             <constraint firstItem="8Tm-pE-PmC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4p2-2c-8jM"/>
                             <constraint firstItem="gME-K3-Rdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6VY-zX-JIx"/>
-                            <constraint firstItem="oYf-1q-Nfq" firstAttribute="top" secondItem="G51-h1-Zlz" secondAttribute="bottom" constant="44" id="Cjz-gE-LzY"/>
                             <constraint firstItem="G51-h1-Zlz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EU9-8n-Veu"/>
-                            <constraint firstItem="oYf-1q-Nfq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WyU-A4-VKu"/>
                             <constraint firstItem="8Tm-pE-PmC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="maH-GS-Esz"/>
-                            <constraint firstItem="zYV-wz-ojO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRc-57-1TR"/>
                             <constraint firstItem="G51-h1-Zlz" firstAttribute="top" secondItem="8Tm-pE-PmC" secondAttribute="bottom" constant="48" id="pIb-On-a1L"/>
                             <constraint firstItem="8Tm-pE-PmC" firstAttribute="top" secondItem="gME-K3-Rdb" secondAttribute="bottom" constant="48" id="tJV-eJ-tcA"/>
                         </constraints>

@@ -16,8 +16,9 @@
     UIView *containView = transitionContext.containerView;
     [containView addSubview:fromVC.view];
     fromVC.view.alpha = 1;
-    fromVC.view.backgroundColor = [UIColor clearColor];
+    fromVC.centerView.transform = CGAffineTransformMakeScale(1, 1);
     [UIView animateWithDuration:0.35 animations:^{
+        fromVC.centerView.transform = CGAffineTransformMakeScale(0.3, 0.3);
         fromVC.view.alpha = 0.1;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
@@ -25,6 +26,6 @@
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.5;
+    return 0.35;
 }
 @end

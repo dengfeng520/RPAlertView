@@ -8,11 +8,9 @@
 
 #import "ViewController.h"
 #import "RPAlertViewController+Animation.h"
-#import "RPDateView.h"
 
-@interface ViewController ()<RPDateViewDatasource>
+@interface ViewController ()
 
-@property (strong, nonatomic) RPDateView *dateView;
 @property (assign, nonatomic) NSInteger itemNumber;
 
 @end
@@ -65,42 +63,7 @@
     };
     [self presentViewController:alertView animated:true completion:nil];
 }
-- (IBAction)showDateViewTypeFrist:(id)sender {
-    self.itemNumber = 3;
-    [self showDateView];
-}
 
-- (IBAction)showDateViewTypeSecond:(id)sender {
-    self.itemNumber = 5;
-    [self showDateView];
-}
-
-- (void)showDateView {
-    [self.dateView showDateViewAnimationWithMode:pushMode];
-    __weak typeof (self) weakSelf = self;
-    self.dateView.fetchCurrentDateBlocks = ^(NSString * _Nonnull timeString) {
-        [weakSelf.dateView hiddenDateViewAboutAnimation:^{
-            [weakSelf removeDateView];
-        }];
-    };
-}
-
-- (void)removeDateView {
-    if (_dateView) {
-        _dateView.hidden = true;
-        [_dateView removeFromSuperview];
-        _dateView = nil;
-    }
-}
-
-- (RPDateView *)dateView {
-    if (!_dateView) {
-        _dateView = [[RPDateView alloc] initWithFrame:self.view.frame withPosition:center];
-        [self.view addSubview:_dateView];
-        _dateView.datasource = self;
-    }
-    return _dateView;
-}
 
 - (NSInteger)itemforNumberWithPickView {
     return  self.itemNumber;
