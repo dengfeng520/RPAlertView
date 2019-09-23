@@ -120,6 +120,28 @@
     [self.rightBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickRightBtnBlock();
     }];
+    
+    [self configDrakMode];
+}
+
+// 夜间模式适配
+- (void)configDrakMode {
+    if (@available(iOS 13.0, *)) {
+          self.bodyLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                  return UIColor.blackColor;
+              } else {
+                  return UIColor.blackColor;
+              }
+          }];
+          self.titleLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                  return UIColor.blackColor;
+              } else {
+                  return UIColor.blackColor;
+              }
+          }];
+      }
 }
 
 - (void)configOnlyOneBtn:(NSString *)title body:(NSString *)context btnTitle:(NSString *)btnText {
