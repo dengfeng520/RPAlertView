@@ -10,9 +10,6 @@
 
 @interface RPAlertViewController ()
 
-@property (strong, nonatomic) UIButton *leftBtn;
-@property (strong, nonatomic) UIButton *rightBtn;
-
 @end
 
 @implementation RPAlertViewController
