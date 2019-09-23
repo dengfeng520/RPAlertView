@@ -55,17 +55,7 @@
     self = [super init];
     if (self) {
         if (mode == showRoot) {
-             if (@available(iOS 13.0, *)) {
-                 self.view.backgroundColor =  [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-                   if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                       return UIColor.clearColor;
-                   } else {
-                       return UIColor.blackColor;
-                   }
-                }];
-            } else {
-                self.view.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
-          }
+            self.view.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
         } else {
             self.view.backgroundColor = UIColor.clearColor;
         }

@@ -7,6 +7,31 @@
 
 * Xcode 10+
 
+<h2>Requirements</h2>
+
+**RPAlertView works on iOS 9+ to build.**
+
+<h2>Adding RPAlertView to your project</h2>
+
+**CocoaPods is the recommended way to add RPAlertView to your project.**
+
+**1、Add a pod entry for RPAlertView to your project Podfile**
+
+```
+pod 'RPAlertView'
+
+```
+or
+
+```
+pod 'RPAlertView', :git => 'https://github.com/dengfeng520/RPAlertView'
+```
+
+**2、Install the pod by running**
+
+```
+pod install
+```
 
 
 <h2>Usage</h2>
@@ -65,9 +90,9 @@ alertView.oneBtnBlock = ^{
 [self presentViewController:alertView animated:true completion:nil];
 ```
 
-![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo1.png?raw=true)
-![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo2.png?raw=true)
-![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/Alertdemo3.png?raw=true)
+![demo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo1.png?raw=true)
+![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo2.png?raw=true)
+![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo3.png?raw=true)
 
 
 

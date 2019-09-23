@@ -43,7 +43,7 @@
     [[self.titleLab.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:8] setActive:true];
     [[self.titleLab.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-8] setActive:true];
     self.titleLab.textAlignment = NSTextAlignmentCenter;
-    self.titleLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:20];
+    self.titleLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:18];
     self.titleLab.text = @"title";
     
     self.bodyLab = [[UILabel alloc] init];
@@ -54,7 +54,7 @@
     [[self.bodyLab.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-20] setActive:true];
     [[self.bodyLab.topAnchor constraintEqualToAnchor:self.titleLab.bottomAnchor constant:16] setActive:true];
     self.bodyLab.textAlignment = NSTextAlignmentCenter;
-    self.bodyLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:16];
+    self.bodyLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:14];
     self.bodyLab.numberOfLines = 0;
     
     
@@ -65,7 +65,8 @@
     [[horizontalLineView.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:0] setActive:true];
     [[horizontalLineView.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:0] setActive:true];
     [[horizontalLineView.topAnchor constraintEqualToAnchor:self.bodyLab.bottomAnchor constant:20] setActive:true];
-    horizontalLineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
+    [self configDrakModeWithLineView:horizontalLineView];
+    
     
     self.verticalLineView = [[UIView alloc] init];
     [self addSubview:self.verticalLineView];
@@ -76,6 +77,7 @@
     [[self.verticalLineView.heightAnchor constraintEqualToConstant:46] setActive:true];
     [[self.verticalLineView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     self.verticalLineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
+    [self configDrakModeWithLineView:self.verticalLineView];
     
     
     self.onlyOneBtn = [[UIButton alloc] init];
@@ -87,6 +89,7 @@
     [[self.onlyOneBtn.heightAnchor constraintEqualToConstant:48] setActive:true];
     [[self.onlyOneBtn.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     [self.onlyOneBtn setTitle:@"OK" forState:UIControlStateNormal];
+    self.onlyOneBtn.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:18];
     [self.onlyOneBtn setTitleColor:[UIColor colorWithRed:53/255.0 green:120/255.0 blue:246/255.0 alpha:1] forState:UIControlStateNormal];
     [self.onlyOneBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickOneBtnBlock();
@@ -102,6 +105,7 @@
     [[self.leftBtn.heightAnchor constraintEqualToConstant:48] setActive:true];
     [self.leftBtn setTitle:@"Cancel" forState:UIControlStateNormal];
     [self.leftBtn setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
+    self.leftBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [self.leftBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickLeftBtnBlock();
     }];
@@ -116,16 +120,17 @@
     [[self.rightBtn.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     [[self.rightBtn.heightAnchor constraintEqualToConstant:48] setActive:true];
     [self.rightBtn setTitle:@"OK" forState:UIControlStateNormal];
+    self.rightBtn.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:18];
     [self.rightBtn setTitleColor:[UIColor colorWithRed:53/255.0 green:120/255.0 blue:246/255.0 alpha:1] forState:UIControlStateNormal];
     [self.rightBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickRightBtnBlock();
     }];
     
-    [self configDrakMode];
+    [self configDrakModeWithLab];
 }
 
 // 夜间模式适配
-- (void)configDrakMode {
+- (void)configDrakModeWithLab {
     if (@available(iOS 13.0, *)) {
           self.bodyLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
               if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
@@ -141,7 +146,21 @@
                   return UIColor.blackColor;
               }
           }];
-      }
+    }
+}
+
+- (void)configDrakModeWithLineView:(UIView *)lineView {
+    if (@available(iOS 13.0, *)) {
+        lineView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:0.5];
+            } else {
+                return UIColor.groupTableViewBackgroundColor;
+            }
+        }];
+    } else {
+        lineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
+    }
 }
 
 - (void)configOnlyOneBtn:(NSString *)title body:(NSString *)context btnTitle:(NSString *)btnText {

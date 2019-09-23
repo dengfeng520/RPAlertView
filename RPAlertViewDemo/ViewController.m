@@ -24,7 +24,7 @@
 
 - (IBAction)clickShowOnlyOKBtn:(id)sender {
     RPAlertViewController *alertView = [[RPAlertViewController alloc] initWithMode:showRoot];
-    [alertView configAlertOnlyOneBtn:@"title" body:@"body" btnTitle:@"OK"];
+    [alertView configAlertOnlyOneBtn:@"title" body:@"your account is forbidden from matching and chatting for 7 day " btnTitle:@"OK"];
     alertView.modalPresentationStyle = UIModalPresentationCustom;
     alertView.oneBtnBlock = ^{
         
@@ -34,7 +34,7 @@
 
 - (IBAction)clickCancelAndOKBtn:(id)sender {
     RPAlertViewController *alertView = [[RPAlertViewController alloc] initWithMode:showRoot];
-    [alertView configMixedAlert:@"title" body:@"body" leftBtnTitle:@"cancel" rightBtnTitle:@"OK"];
+    [alertView configMixedAlert:@"title" body:@"your account is forbidden from matching and chatting for 7 day" leftBtnTitle:@"cancel" rightBtnTitle:@"OK"];
     alertView.modalPresentationStyle = UIModalPresentationCustom;
     alertView.leftBtnBlock = ^{
         
