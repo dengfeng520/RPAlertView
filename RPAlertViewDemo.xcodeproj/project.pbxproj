@@ -79,7 +79,7 @@
 		1DDC415A22E80A50000EB88E /* RPAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1DDC417122E80A6E000EB88E /* BXAlertView */,
+				1DDC417122E80A6E000EB88E /* RPAlertView */,
 				1DDC415B22E80A50000EB88E /* AppDelegate.h */,
 				1DDC415C22E80A50000EB88E /* AppDelegate.m */,
 				1DDC415E22E80A50000EB88E /* ViewController.h */,
@@ -93,7 +93,7 @@
 			path = RPAlertViewDemo;
 			sourceTree = "<group>";
 		};
-		1DDC417122E80A6E000EB88E /* BXAlertView */ = {
+		1DDC417122E80A6E000EB88E /* RPAlertView */ = {
 			isa = PBXGroup;
 			children = (
 				1DDC418122E80ACF000EB88E /* UIButton+Category.h */,
@@ -111,7 +111,7 @@
 				1DDC418422E8330F000EB88E /* RPAlertViewController+Animation.h */,
 				1DDC418522E8330F000EB88E /* RPAlertViewController+Animation.m */,
 			);
-			path = BXAlertView;
+			path = RPAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
