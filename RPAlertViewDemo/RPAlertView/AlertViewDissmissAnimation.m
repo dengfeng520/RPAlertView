@@ -17,12 +17,14 @@
     [containView addSubview:fromVC.view];
     fromVC.view.alpha = 1;
     fromVC.centerView.transform = CGAffineTransformMakeScale(1, 1);
-    [UIView animateWithDuration:0.35 animations:^{
-        fromVC.centerView.transform = CGAffineTransformMakeScale(0.3, 0.3);
-        fromVC.view.alpha = 0.1;
-    } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.35 animations:^{
+            fromVC.centerView.transform = CGAffineTransformMakeScale(0.3, 0.3);
+            fromVC.view.alpha = 0.1;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    });
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {

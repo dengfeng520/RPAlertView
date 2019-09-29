@@ -23,13 +23,14 @@
 }
 
 - (IBAction)clickShowOnlyOKBtn:(id)sender {
+    __weak typeof (self) weakSelf = self;
     RPAlertViewController *alertView = [[RPAlertViewController alloc] initWithMode:showRoot];
     [alertView configAlertOnlyOneBtn:@"title" body:@"your account is forbidden from matching and chatting for 7 day " btnTitle:@"OK"];
     alertView.modalPresentationStyle = UIModalPresentationCustom;
     alertView.oneBtnBlock = ^{
         
     };
-    [self presentViewController:alertView animated:true completion:nil];
+    [weakSelf presentViewController:alertView animated:true completion:nil];
 }
 
 - (IBAction)clickCancelAndOKBtn:(id)sender {
