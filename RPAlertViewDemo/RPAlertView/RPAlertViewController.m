@@ -44,8 +44,23 @@
         [[_centerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:0] setActive:true];
         [[_centerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:0] setActive:true];
         _centerView.layer.cornerRadius = 16;
+        [self configDrakModeWithCenterView];
     }
     return _centerView;
+}
+
+- (void)configDrakModeWithCenterView {
+    if (@available(iOS 13.0, *)) {
+          _centerView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                  return [UIColor colorWithRed:65/255.0 green:61/255.0 blue:50/255.0 alpha:0.9];
+              } else {
+                  return UIColor.whiteColor;
+              }
+          }];
+    } else {
+        _centerView.backgroundColor = UIColor.whiteColor;
+    }
 }
 
 - (instancetype)initWithMode:(bgColorMode)mode {

@@ -31,7 +31,6 @@
 }
 
 - (void)configUI {
-    self.backgroundColor = UIColor.whiteColor;
     
     __weak typeof (self) weakSelf = self;
     
@@ -129,19 +128,18 @@
     [self configDrakModeWithLab];
 }
 
-// 夜间模式适配
 - (void)configDrakModeWithLab {
     if (@available(iOS 13.0, *)) {
           self.bodyLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
               if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return UIColor.blackColor;
+                  return UIColor.whiteColor;
               } else {
                   return UIColor.blackColor;
               }
           }];
           self.titleLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
               if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return UIColor.blackColor;
+                  return UIColor.whiteColor;
               } else {
                   return UIColor.blackColor;
               }
