@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RPAlertView"
-  spec.version      = "1.1"
+  spec.version      = "1.2"
   spec.summary      = "'RPAlertView' is a custom iOS view,can be easily set the hide and show it."
 
   # This description is used to generate tags and improve search results.

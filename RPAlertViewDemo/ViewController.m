@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+   
 }
 
 - (IBAction)clickShowOnlyOKBtn:(id)sender {
@@ -28,7 +30,7 @@
     [alertView configAlertOnlyOneBtn:@"title" body:@"your account is forbidden from matching and chatting for 7 day " btnTitle:@"OK"];
     alertView.modalPresentationStyle = UIModalPresentationCustom;
     alertView.oneBtnBlock = ^{
-        
+
     };
     [weakSelf presentViewController:alertView animated:true completion:nil];
 }

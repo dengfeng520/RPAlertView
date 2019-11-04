@@ -7,6 +7,13 @@
 
 * Xcode 10+
 
+![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo1.png?raw=true)
+![AlertDemo2](https://github.com/dengfeng520/RPAlertView/blob/master/demo2.png?raw=true)
+![AlertDemo3](https://github.com/dengfeng520/RPAlertView/blob/master/demo3.png?raw=true)
+![AlertDemo4](https://github.com/dengfeng520/RPAlertView/blob/master/demo4.png?raw=true)
+![AlertDemo5](https://github.com/dengfeng520/RPAlertView/blob/master/demo5.png?raw=true)
+![AlertDemo6](https://github.com/dengfeng520/RPAlertView/blob/master/demo6.png?raw=true)
+
 <h2>Requirements</h2>
 
 **RPAlertView works on iOS 9+ to build.**
@@ -90,9 +97,7 @@ alertView.oneBtnBlock = ^{
 [self presentViewController:alertView animated:true completion:nil];
 ```
 
-![demo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo1.png?raw=true)
-![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo2.png?raw=true)
-![AlertDemo1](https://github.com/dengfeng520/RPAlertView/blob/master/demo3.png?raw=true)
+
 
 
 

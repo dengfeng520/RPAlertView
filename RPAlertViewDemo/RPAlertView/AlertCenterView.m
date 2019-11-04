@@ -60,7 +60,7 @@
     UIView *horizontalLineView = [[UIView alloc] init];
     [self addSubview:horizontalLineView];
     horizontalLineView.translatesAutoresizingMaskIntoConstraints = false;
-    [[horizontalLineView.heightAnchor constraintEqualToConstant:1.5] setActive:true];
+    [[horizontalLineView.heightAnchor constraintEqualToConstant:1] setActive:true];
     [[horizontalLineView.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:0] setActive:true];
     [[horizontalLineView.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:0] setActive:true];
     [[horizontalLineView.topAnchor constraintEqualToAnchor:self.bodyLab.bottomAnchor constant:20] setActive:true];
@@ -71,7 +71,7 @@
     [self addSubview:self.verticalLineView];
     self.verticalLineView.translatesAutoresizingMaskIntoConstraints = false;
     [[self.verticalLineView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor constant:0] setActive:true];
-    [[self.verticalLineView.widthAnchor constraintEqualToConstant:1.5] setActive:true];
+    [[self.verticalLineView.widthAnchor constraintEqualToConstant:1] setActive:true];
     [[self.verticalLineView.topAnchor constraintEqualToAnchor:horizontalLineView.bottomAnchor constant:2] setActive:true];
     [[self.verticalLineView.heightAnchor constraintEqualToConstant:46] setActive:true];
     [[self.verticalLineView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
