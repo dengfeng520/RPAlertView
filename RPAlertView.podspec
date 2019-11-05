@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RPAlertView"
-  spec.version      = "1.2"
+  spec.version      = "1.3"
   spec.summary      = "'RPAlertView' is a custom iOS view,can be easily set the hide and show it."
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "'RPAlertView' is a custom iOS view,support for systems after iOS 9.0+ and Swift 5.0+,can be easily set the hide and show it."
+  spec.description  = "'RPAlertView' is a custom iOS view,support for systems after iOS 10.0+ and Swift 5.0+,can be easily set the hide and show it."
 
   spec.homepage     = "https://github.com/dengfeng520/RPAlertView"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -66,7 +66,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target = "9.0"
+  spec.ios.deployment_target = "10.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"

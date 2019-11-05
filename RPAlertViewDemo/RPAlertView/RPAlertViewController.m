@@ -53,7 +53,7 @@
     if (@available(iOS 13.0, *)) {
           _centerView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
               if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.85];
+                  return [UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1];
               } else {
                   return UIColor.whiteColor;
               }
