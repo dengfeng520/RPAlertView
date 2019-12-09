@@ -7,10 +7,7 @@
 //
 
 #import "RPAlertViewController.h"
-
-@interface RPAlertViewController ()
-
-@end
+#import "ConfigDrakMode.h"
 
 @implementation RPAlertViewController
 
@@ -44,23 +41,9 @@
         [[_centerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:0] setActive:true];
         [[_centerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:0] setActive:true];
         _centerView.layer.cornerRadius = 16;
-        [self configDrakModeWithCenterView];
+        [ConfigDrakMode configDrakModeWith:_centerView];
     }
     return _centerView;
-}
-
-- (void)configDrakModeWithCenterView {
-    if (@available(iOS 13.0, *)) {
-          _centerView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return [UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1];
-              } else {
-                  return UIColor.whiteColor;
-              }
-          }];
-    } else {
-        _centerView.backgroundColor = UIColor.whiteColor;
-    }
 }
 
 - (instancetype)initWithMode:(bgColorMode)mode {

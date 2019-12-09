@@ -20,6 +20,7 @@
 		1DDC418022E80A6E000EB88E /* RPAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC417A22E80A6E000EB88E /* RPAlertViewController.m */; };
 		1DDC418322E80AD0000EB88E /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC418222E80AD0000EB88E /* UIButton+Category.m */; };
 		1DDC418622E8330F000EB88E /* RPAlertViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC418522E8330F000EB88E /* RPAlertViewController+Animation.m */; };
+		1DE007FA239DF78100CD9F65 /* ConfigDrakMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE007F9239DF78100CD9F65 /* ConfigDrakMode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		1DDC418222E80AD0000EB88E /* UIButton+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
 		1DDC418422E8330F000EB88E /* RPAlertViewController+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPAlertViewController+Animation.h"; sourceTree = "<group>"; };
 		1DDC418522E8330F000EB88E /* RPAlertViewController+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RPAlertViewController+Animation.m"; sourceTree = "<group>"; };
+		1DE007F8239DF78100CD9F65 /* ConfigDrakMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigDrakMode.h; sourceTree = "<group>"; };
+		1DE007F9239DF78100CD9F65 /* ConfigDrakMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigDrakMode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				1DDC417A22E80A6E000EB88E /* RPAlertViewController.m */,
 				1DDC418422E8330F000EB88E /* RPAlertViewController+Animation.h */,
 				1DDC418522E8330F000EB88E /* RPAlertViewController+Animation.m */,
+				1DE007F8239DF78100CD9F65 /* ConfigDrakMode.h */,
+				1DE007F9239DF78100CD9F65 /* ConfigDrakMode.m */,
 			);
 			path = RPAlertView;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				1DDC415D22E80A50000EB88E /* AppDelegate.m in Sources */,
 				1DDC418322E80AD0000EB88E /* UIButton+Category.m in Sources */,
 				1DDC418022E80A6E000EB88E /* RPAlertViewController.m in Sources */,
+				1DE007FA239DF78100CD9F65 /* ConfigDrakMode.m in Sources */,
 				1DDC417E22E80A6E000EB88E /* AlertViewShowPresentAnimation.m in Sources */,
 				1DDC418622E8330F000EB88E /* RPAlertViewController+Animation.m in Sources */,
 				1DDC417D22E80A6E000EB88E /* AlertCenterView.m in Sources */,
