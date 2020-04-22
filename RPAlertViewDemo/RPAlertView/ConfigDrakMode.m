@@ -9,7 +9,7 @@
 #import "ConfigDrakMode.h"
 
 @implementation ConfigDrakMode
-+ (void)configDrakModeWith:(UIView *)isView {
++ (void)configViewBgDrakModeWith:(UIView *)isView {
     if (@available(iOS 13.0, *)) {
         isView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
@@ -22,4 +22,33 @@
         isView.backgroundColor = UIColor.whiteColor;
     }
 }
+
++ (void)configTxtColorDrakModeWith:(UILabel *)isLab {
+    if (@available(iOS 13.0, *)) {
+          isLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                  return UIColor.whiteColor;
+              } else {
+                  return UIColor.blackColor;
+              }
+          }];
+    } else {
+        isLab.textColor = UIColor.blackColor;
+    }
+}
+
++ (void)configDrakModeWithLineView:(UIView *)lineView {
+    if (@available(iOS 13.0, *)) {
+        lineView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:0.5];
+            } else {
+                return UIColor.groupTableViewBackgroundColor;
+            }
+        }];
+    } else {
+        lineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
+    }
+}
+
 @end

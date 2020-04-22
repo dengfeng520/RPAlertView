@@ -41,7 +41,8 @@
         [[_centerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:0] setActive:true];
         [[_centerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:0] setActive:true];
         _centerView.layer.cornerRadius = 16;
-        [ConfigDrakMode configDrakModeWith:_centerView];
+        [ConfigDrakMode configViewBgDrakModeWith:_centerView];
+        
     }
     return _centerView;
 }

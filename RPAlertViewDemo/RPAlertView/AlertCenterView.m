@@ -8,6 +8,7 @@
 
 #import "AlertCenterView.h"
 #import "UIButton+Category.h"
+#import "ConfigDrakMode.h"
 
 @interface AlertCenterView ()
 
@@ -44,6 +45,7 @@
     self.titleLab.textAlignment = NSTextAlignmentCenter;
     self.titleLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:18];
     self.titleLab.text = @"title";
+    [ConfigDrakMode configTxtColorDrakModeWith:self.titleLab];
     
     self.bodyLab = [[UILabel alloc] init];
     [self addSubview:self.bodyLab];
@@ -55,6 +57,7 @@
     self.bodyLab.textAlignment = NSTextAlignmentCenter;
     self.bodyLab.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:14];
     self.bodyLab.numberOfLines = 0;
+    [ConfigDrakMode configTxtColorDrakModeWith:self.bodyLab];
     
     
     UIView *horizontalLineView = [[UIView alloc] init];
@@ -64,7 +67,7 @@
     [[horizontalLineView.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:0] setActive:true];
     [[horizontalLineView.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:0] setActive:true];
     [[horizontalLineView.topAnchor constraintEqualToAnchor:self.bodyLab.bottomAnchor constant:20] setActive:true];
-    [self configDrakModeWithLineView:horizontalLineView];
+    [ConfigDrakMode configDrakModeWithLineView:horizontalLineView];
     
     
     self.verticalLineView = [[UIView alloc] init];
@@ -76,7 +79,7 @@
     [[self.verticalLineView.heightAnchor constraintEqualToConstant:46] setActive:true];
     [[self.verticalLineView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0] setActive:true];
     self.verticalLineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
-    [self configDrakModeWithLineView:self.verticalLineView];
+    [ConfigDrakMode configDrakModeWithLineView:self.verticalLineView];
     
     
     self.onlyOneBtn = [[UIButton alloc] init];
@@ -124,41 +127,6 @@
     [self.rightBtn addTargetWithEvent:UIControlEventTouchUpInside withTargetBlock:^{
         weakSelf.clickRightBtnBlock();
     }];
-    
-    [self configDrakModeWithLab];
-}
-
-- (void)configDrakModeWithLab {
-    if (@available(iOS 13.0, *)) {
-          self.bodyLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return UIColor.whiteColor;
-              } else {
-                  return UIColor.blackColor;
-              }
-          }];
-          self.titleLab.textColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-              if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                  return UIColor.whiteColor;
-              } else {
-                  return UIColor.blackColor;
-              }
-          }];
-    }
-}
-
-- (void)configDrakModeWithLineView:(UIView *)lineView {
-    if (@available(iOS 13.0, *)) {
-        lineView.backgroundColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                return [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:0.5];
-            } else {
-                return UIColor.groupTableViewBackgroundColor;
-            }
-        }];
-    } else {
-        lineView.backgroundColor = UIColor.groupTableViewBackgroundColor;
-    }
 }
 
 - (void)configOnlyOneBtn:(NSString *)title body:(NSString *)context btnTitle:(NSString *)btnText {

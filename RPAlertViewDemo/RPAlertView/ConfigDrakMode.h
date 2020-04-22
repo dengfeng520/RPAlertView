@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ConfigDrakMode : NSObject
-+ (void)configDrakModeWith:(UIView *)isView;
++ (void)configViewBgDrakModeWith:(UIView *)isView;
++ (void)configTxtColorDrakModeWith:(UILabel *)isLab;
++ (void)configDrakModeWithLineView:(UIView *)lineView;
 @end
 
 NS_ASSUME_NONNULL_END
